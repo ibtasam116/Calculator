@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    </script>
+  </head>
+  <body>
+    <div class="container">
+  <div class="col-md-6 mx-auto">
+      <div class="row">
+          <div class="col-12">
+            <input type="text" class="dvalue" value="" id="d" disabled />
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-3">
+            <button type="button" value="+" class="obtn" onclick="addtod('+')">
+                +
+              </button>
+          </div>
+          <div class="col-3">
+            <button type="button" class="obtn" value="-" onclick="addtod('-')">
+                -
+              </button>
+        </div>
+        <div class="col-3">
+            <button
+            type="button"
+            
+            class="obtn"
+            value="/"
+            onclick="addtod('/')"
+          >
+            /
+          </button>
+        </div>
+        <div class="col-3" rowspan="3">
+            <button type="button" class="obtn" value="*" onclick="addtod('*')">
+                x
+              </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+           <button type="button" value="7" class="btn" onclick="addtod(7)">
+               7
+             </button>
+             <button type="button" value="4" class="btn" onclick="addtod(4)">
+                4
+              </button>
+              <button type="button" value="1" class="btn" onclick="addtod(1)">
+                1
+              </button>
+              <button type="button" value="0" class="btn" onclick="addtod(0)">
+                0
+              </button>
+        </div>
+        <div class="col-3">
+           <button type="button" class="btn" value="8" onclick="addtod(8)">
+               8
+             </button>
+             <button type="button" class="btn" value="5" onclick="addtod(5)">
+                5
+             </button>
+             <button type="button" class="btn" value="2" onclick="addtod(2)">
+                2
+             </button>
+
+             <button type="button" class="btn" value="." onclick="addtod('.')">
+              .
+            </button>
+              
+       </div>
+       <div class="col-3">
+           <button type="button" class="btn" value="9" onclick="addtod(9)">
+               9
+             </button>
+             <button type="button" class="btn" value="6" onclick="addtod(6)">
+                6
+            </button>
+            <button type="button" value="3" class="btn" onclick="addtod(3)">
+                3
+              </button>
+              <button type="button" class="btn" style="background-color: red; color: white;" 
+              value="Ac" onclick="reset()">
+                Ac
+              </button>
+       </div>
+       <div class="col-3">
+        <button
+        type="button"
+        value="="
+        class="abtn"  
+        onclick="ans()"
+        
+      >
+        =
+      </button>
+       </div>
+      
+     
+    
+        </div> <!--row 2-->
+        </div> <!-- col-md-6-->
+         </div> <!--container-->
+  
+            
+    <script>
+    
+        function reset() {
+          document.getElementById("d").value = 0;
+        }
+      
+        function addtod(v) {
+          var recentvalue = document.getElementById("d").value+=v;
+          
+          
+        }
+        function ans(){
+            var values= document.getElementById("d").value;
+            document.getElementById("d").value=eval(values);
+        }
+        </script>
+  </body>
+</html>
